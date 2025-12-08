@@ -50,12 +50,11 @@ export default function Navbar() {
             Home
           </Link>
           <Link 
-            href="/about" 
+            href="/services" 
             className="hover:text-gray-300 text-[20px] p-2 w-[80%]"
             onClick={() => setOpen(false)}
-
           >
-            About
+            Services
           </Link>
           <Link 
             href="/contact" 
@@ -66,11 +65,12 @@ export default function Navbar() {
             Contact
           </Link>
           <Link 
-            href="/services" 
+            href="/about" 
             className="hover:text-gray-300 text-[20px] p-2 w-[80%]"
             onClick={() => setOpen(false)}
+
           >
-            Services
+            About us
           </Link>
 
         </div>
