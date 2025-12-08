@@ -1,12 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightLong } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import { Josefin_Sans } from 'next/font/google';
+export const josefin = Josefin_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700'],
+});
 
 export default function AboutPage() {
     return (
         <>
         <div className='justify-center items-start flex flex-col p-5 pt-[100px]'>
-            <span className="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[32px] w-[80vw] text-left">
+            <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[32px] w-[80vw] text-left ${josefin.className}`}>
             About Us
             </span>
             <p className='mt-4'>At Bhuhaas, we are dedicated to providing top-notch digital marketing solutions that help businesses thrive in the online world. Our team of experts specializes in SEO, social media management, content creation, and more, ensuring that your brand reaches its full potential.</p>
@@ -15,7 +20,7 @@ export default function AboutPage() {
         </div>
               {/* Get in Touch */}
             <div className="h-[30vh] justify-center items-center flex flex-col">
-                <span className="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[28px] w-[80vw] mt-[100px] text-left">
+                <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[28px] w-[80vw] mt-[100px] text-left ${josefin.className}`}>
                     Get in Touch
                 </span>
 

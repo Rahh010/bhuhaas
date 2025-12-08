@@ -4,7 +4,13 @@ import Navbar from "@/components/Navbar";
 import Logo from "@/components/Logo";
 import Script from "next/script";
 import Footer from "@/components/Footer";
+import { Delius } from "next/font/google";
 
+
+export const delius = Delius({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 
 export const metadata: Metadata = {
@@ -19,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={delius.className}>
         <Script
           src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
           type="module"

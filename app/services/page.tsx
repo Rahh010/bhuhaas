@@ -3,15 +3,21 @@ import Card from "@/components/Card";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
+import { Josefin_Sans } from "next/font/google";
+
+export const josefin = Josefin_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+});
 
 export default function Services() {
     return (
         <>
             <div className="w-screen justify-center items-center flex flex-col p-5 pt-[100px]">
-                <span className="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[32px] w-[80vw] text-left">
+                <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[32px] w-[80vw] text-left ${josefin.className}`}>
                     Our Services
                 </span>
-                <p className="mt-4">Explore our range of services designed to elevate your brand and drive growth.</p>
+                <p className="mt-4 pl-6">Explore our range of services designed to elevate your brand and drive growth.</p>
                 {/* Additional content about services can be added here */}
                 <div>
                     {cardsData.map((card, index) => (
@@ -29,7 +35,7 @@ export default function Services() {
 
             {/* Get in Touch */}
             <div className="h-[30vh] justify-center items-center flex flex-col">
-                <span className="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[28px] w-[80vw] mt-[100px] text-left">
+                <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[28px] w-[80vw] mt-[100px] text-left ${josefin.className}`}>
                     Get in Touch
                 </span>
 

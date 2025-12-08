@@ -1,6 +1,12 @@
 'use client';
 import React from 'react';
 import { useState } from 'react';
+import { Josefin_Sans } from 'next/font/google';
+
+export const josefin = Josefin_Sans({
+    subsets: ['latin'],
+    weight: ['300', '400', '600', '700'],
+});
 
 export default function ContactPage() {
         const [name, setName] = useState("");
@@ -41,7 +47,7 @@ export default function ContactPage() {
         };
     return (
         <div className='justify-center items-start flex flex-col p-5 pt-[100px]'>
-            <span className="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[32px] w-[80vw] text-left">
+            <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[32px] w-[80vw] text-left ${josefin.className}`}>
             Contact Us
             </span>
             <p className='mt-4'>Feel free to reach out to us, and we will call or contact you shortly</p>

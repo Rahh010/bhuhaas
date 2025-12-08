@@ -36,11 +36,6 @@ export const cardsData = [
     heading: "Marketing automation systems",
     text: `- Streamline your marketing efforts.\n- Automated email campaigns.\n- Lead nurturing and scoring.\n- Enhance customer engagement and conversions!`,
   },
-  {
-    imageSrc: "/smm.png",
-    altText: "SMM (Social media management)",
-    heading: "Social Media Management",
-    text: `- Strategic content planning.\n- Engaging posts to grow your audience.\n- Regular interaction and community building.\n- Boost your brand's online presence!`,
-  },
+
   // Add more card objects as needed
 ];
