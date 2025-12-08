@@ -42,10 +42,36 @@ export default function Navbar() {
             </span>
           </button>
 
-          <Link href="/" className="hover:text-gray-300 text-[20px] p-2 w-[80%]">Home</Link>
-          <Link href="/about" className="hover:text-gray-300 text-[20px] p-2 w-[80%]">About</Link>
-          <Link href="/contact" className="hover:text-gray-300 text-[20px] p-2 w-[80%]">Contact</Link>
-          <Link href="/services" className="hover:text-gray-300 text-[20px] p-2 w-[80%]">Services</Link>
+          <Link 
+            href="/" 
+            className="hover:text-gray-300 text-[20px] p-2 w-[80%]"
+            onClick={() => setOpen(false)}
+          >
+            Home
+          </Link>
+          <Link 
+            href="/about" 
+            className="hover:text-gray-300 text-[20px] p-2 w-[80%]"
+            onClick={() => setOpen(false)}
+
+          >
+            About
+          </Link>
+          <Link 
+            href="/contact" 
+            className="hover:text-gray-300 text-[20px] p-2 w-[80%]"
+            onClick={() => setOpen(false)}
+
+          >
+            Contact
+          </Link>
+          <Link 
+            href="/services" 
+            className="hover:text-gray-300 text-[20px] p-2 w-[80%]"
+            onClick={() => setOpen(false)}
+          >
+            Services
+          </Link>
 
         </div>
       )}
