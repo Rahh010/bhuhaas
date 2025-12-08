@@ -6,6 +6,9 @@ export default function Footer() {
     return (
     <footer className="w-full bg-[#121212] border-t border-gray-800 flex flex-col justify-center items-center text-gray-500 text-sm py-4 mt-10 text-[12px]">
         <div>
+            
+        </div>
+        <div>
             Developed and Designed by Rahul | Aruthra
         </div>
         <br />

@@ -1,5 +1,8 @@
 // components/Card.tsx
 "use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import Image from "next/image";
 
@@ -11,8 +14,11 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ imageSrc, altText, heading, text }) => {
+  useEffect(() => {
+  AOS.init({ duration: 800, once: true });
+  }, []);
   return (
-    <div className="w-[80vw] max-w-xl rounded-xl overflow-hidden bg-[#1C1C1C] shadow-[0_0_12px_#A020F0] mt-10 mx-auto">
+    <div className="w-[80vw] max-w-xl rounded-xl overflow-hidden bg-[#1C1C1C] shadow-[0_0_12px_#A020F0] mt-10 mx-auto" data-aos="fade-up">
       {/* Image with bottom fade */}
       <div className="relative h-48 w-full">
         <Image src={imageSrc} alt={altText} fill className="object-cover" />

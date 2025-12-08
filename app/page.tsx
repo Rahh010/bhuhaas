@@ -1,3 +1,4 @@
+'use client';
 import Loader from "@/components/Loader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong, faListCheck } from "@fortawesome/free-solid-svg-icons";
@@ -5,6 +6,10 @@ import Link from "next/link";
 import TestimonialCard from "@/components/TestimonialCard";
 import { testimonialsData } from "@/utils/testimonialsData";
 import { Raleway, Josefin_Sans } from "next/font/google";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 export const raleway = Raleway({
   subsets: ["latin"],
@@ -20,10 +25,16 @@ export const josefin = Josefin_Sans({
 
 
 export default function Home() {
+    useEffect(() => {
+    AOS.init({ duration: 800, once: true }); // duration in ms, once: animation only once
+  }, []);
+
   return (
     <>
       <div className="relative justify-center items-center flex flex-col">
-        <h1 className={`text-[26px] w-[80vw] mt-[200px] text-center font-bold ${raleway.className}`}>Grow Your Brand. Expand Your Reach. Dominate Your Market.</h1>
+        <h1 className={`text-[26px] w-[80vw] mt-[200px] text-center font-bold ${raleway.className}`}
+        data-aos="fade-up"
+        >Grow Your Brand. Expand Your Reach. Dominate Your Market.</h1>
         <Link
           href="/services"
           className="border-2 border-[#A020F0] p-2 pl-5 pr-5 rounded-lg mt-4 mb-1 bg-[#7524A2] cursor-pointer text-white shadow-[0_0_5px_#A020F0]"
@@ -41,8 +52,10 @@ export default function Home() {
       </div>
 
       {/* who are we */}
-      <div className="h-[25vh] justify-center items-center flex flex-col">
-          <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[28px] w-[80vw] mt-[200px] text-left ${josefin.className}`}>
+      <div className="h-[25vh] justify-center items-center flex flex-col" data-aos="fade-up">
+          <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[28px] w-[80vw] mt-[200px] text-left ${josefin.className}`}
+        
+          >
             Who are we
           </span>
 
@@ -52,7 +65,7 @@ export default function Home() {
       </div>
 
       {/* what we gonna do */}
-      <div className="h-[50vh] justify-start items-center flex flex-col">
+      <div className="justify-start items-center flex flex-col" data-aos="fade-up">
           <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[28px] w-[80vw] mt-[200px] text-left ${josefin.className}`}>
             What we gonna do
           </span>
@@ -63,8 +76,8 @@ export default function Home() {
       </div>
 
       {/* our services */}
-      <div className="justify-start items-center flex flex-col">
-        <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[28px] w-[80vw] mt-[200px] text-left ${josefin.className}`}>
+      <div className="justify-start items-center flex flex-col" data-aos="fade-up">
+        <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[28px] w-[80vw] mt-[100px] text-left ${josefin.className}`}>
           Our Services
         </span>
         <p className="w-[80vw] mt-4 text-justify">Explore our range of services designed to elevate your brand and drive growth.</p>
@@ -110,7 +123,7 @@ export default function Home() {
       </div>
 
       {/* Get in Touch */}
-      <div className="h-[30vh] justify-center items-center flex flex-col">
+      <div className="h-[30vh] justify-center items-center flex flex-col" data-aos="fade-up">
           <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[28px] w-[80vw] mt-[100px] text-left ${josefin.className}`}>
             Get in Touch
           </span>
