@@ -44,6 +44,13 @@ export default function ContactPage() {
             services,
             message,
             });
+
+            // Reset form fields
+            setName("");
+            setEmail("");
+            setMobile("");
+            setServices([]);
+            setMessage("");
         };
     return (
         <div className='justify-center items-start flex flex-col p-5 pt-[100px]'>

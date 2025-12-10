@@ -16,7 +16,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col text-left gap-2">
                 <p className="text-white">Follow Us</p>
-                <Link href="https://www.instagram.com/bhuhaas_?utm_source=qr&igsh=MWtpOGUxdW50cmt1dg==" target="_blank"  className="hover:underline mx-2">bhuhaas_</Link>
+                <Link href="https://www.instagram.com/bhuhaas_?utm_source=qr&igsh=MWtpOGUxdW50cmt1dg==" target="_blank" rel="noopener noreferrer"  className="hover:underline mx-2">bhuhaas_</Link>
                 <p className="text-white">Mail Us</p>
                 <Link href="mailto:bhuhaas@gmail.com" className="hover:underline mx-2">bhuhaas@gmail.com</Link>
             </div>
