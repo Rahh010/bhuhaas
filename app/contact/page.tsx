@@ -53,7 +53,7 @@ export default function ContactPage() {
             setMessage("");
         };
     return (
-        <div className='justify-center items-start flex flex-col p-5 pt-[100px]'>
+        <div className='justify-center items-center flex flex-col p-5 pt-[100px]'>
             <span className={`relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-[#A020F0] after:rounded after:blur-sm after:shadow-[0_0_8px_#A020F0] text-[32px] w-[80vw] text-left ${josefin.className}`}>
             Contact Us
             </span>
