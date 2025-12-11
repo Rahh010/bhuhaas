@@ -19,7 +19,7 @@ export default function Services() {
                 </span>
                 <p className="mt-4 pl-6">Explore our range of services designed to elevate your brand and drive growth.</p>
                 {/* Additional content about services can be added here */}
-                <div>
+                <div className="flex flex-wrap">
                     {cardsData.map((card, index) => (
                         <Card
                         key={index}
